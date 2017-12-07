@@ -1,13 +1,9 @@
-  <body>
-    <%= yield %>
-    <h1>タスク一覧</h1>
+<h1>タスク一覧</h1>
     
-    <ul>
-      <% @tasks.each do |task| %>
-        <li><%= link_to task.id, task %> : <%= task.content %></li>
-      <% end %>
-    </ul>
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= link_to task.id, task %> : <%= task.content %> &rArr; <%= task.status %></li>
+  <% end %>
+</ul>
     
-    <%= link_to '新規タスクを登録', new_task_path %>
-  </body>
-</html>
+<%= link_to '新規タスクを登録', new_task_path %>
